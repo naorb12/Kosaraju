@@ -160,7 +160,7 @@ public:
         for (int v : finishOrder) {
             if (color[v] == WHITE) {
                 std::vector<int> component;
-                DFSUtilSecond(v, color, component, componentLookup, currentSCCId);
+                transposed.DFSUtilSecond(v, color, component, componentLookup, currentSCCId);
                 sccs.push_back(component);
                 currentSCCId++;  // Increment the SCC ID for the next component
             }
